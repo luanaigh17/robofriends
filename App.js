@@ -4,7 +4,7 @@ import Searchbox from './Searchbox';
 //! one below is destructured because it has multiple values
 // import { robots } from './robots'; //using this when robots was a file
 import Scroll from './Scroll';
-import ErrorBoundry from './ErrorBoundry';
+import ErrorBoundary from './ErrorBoundary';
 import './App.css';
 
 //! to use state you have to changed the App from const to a class
@@ -43,9 +43,9 @@ class App extends Component{
                 <h1 className='f1'> RoboFriends </h1>
                 <Searchbox searchChange={this.onSearchChange}/> 
                 <Scroll> 
-                    <ErrorBoundry>
+                    <ErrorBoundary>
                         <CardList robots={filteredRobots} />
-                    </ErrorBoundry>
+                    </ErrorBoundary>
                 </Scroll>
             </div>
             );
